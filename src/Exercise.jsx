@@ -1,12 +1,9 @@
-function Card({ title, desc }) {
-  return (
-    <div>
-      <h2>{title}</h2>
-      <p>{desc}</p>
-    </div>
-  );
+function Btn() {
+  function clickHandler() {
+    console.log("Clicked !");
+  }
+
+  return <button onClick={clickHandler}>Click</button>;
 }
 
-export default Card;
-
-
+export default Btn;
