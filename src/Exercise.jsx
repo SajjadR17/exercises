@@ -1,18 +1,19 @@
-function CardRender() {
-  const list = [
-    { id: 1, title: "Laptop" },
-    { id: 2, title: "Phone" },
-  ];
+import { useState } from "react";
+
+function Counter() {
+  let [counter, setState] = useState(0);
+
+  function counterIncrease() {
+    setState((counter) => counter + 1);
+  }
 
   return (
-    <>
-      {list.map((item) => (
-        <div key={item.id}>
-          <h2>{item.title}</h2>
-        </div>
-      ))}
-    </>
+    <div className="counter">
+      <h1>Counter</h1>
+      <p>Num = {counter}</p>
+      <button onClick={counterIncrease}>Increase</button>
+    </div>
   );
 }
 
-export default CardRender;
+export default Counter;
