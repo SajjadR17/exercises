@@ -1,4 +1,4 @@
-import Btn from "./Exercise";
+import CardRender from "./Exercise";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
         <h2>Sajjad Roohandeh</h2>
         <span>React Exercise</span>
       </div>
-      <Btn />
+      <CardRender />
     </>
   );
 }
