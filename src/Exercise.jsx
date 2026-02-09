@@ -1,19 +1,18 @@
 import { useState } from "react";
 
-function Counter() {
-  let [counter, setState] = useState(0);
+function Btn() {
+  let [state, setState] = useState(false);
 
-  function counterIncrease() {
-    setState((counter) => counter + 1);
+  function clickHandler() {
+    setState((state) => !state);
   }
 
   return (
-    <div className="counter">
-      <h1>Counter</h1>
-      <p>Num = {counter}</p>
-      <button onClick={counterIncrease}>Increase</button>
-    </div>
+    <>
+      {state ? <p>ON</p> : <p>OFF</p>}
+      <button onClick={clickHandler}>{state ? "OFF" : "ON"}</button>
+    </>
   );
 }
 
-export default Counter;
+export default Btn;
