@@ -1,32 +1,24 @@
 import { useState } from "react";
 
-function Counter() {
-  let [counter, setState] = useState(0);
+function Input() {
+  let [input, setInput] = useState("");
 
-  function counterIncrease() {
-    setState((counter) => counter + 1);
-  }
-
-  function counterReset() {
-    setState(0);
-  }
-
-  function counterDecrease() {
-    if (counter === 0) {
-      return;
-    }
-    setState((counter) => counter - 1);
+  function changeHandler(e) {
+    setInput(e.target.value);
   }
 
   return (
-    <div className="counter">
-      <h1>Counter</h1>
-      <p className={counter % 2 === 0 && "blue"}>Num = {counter}</p>
-      <button onClick={counterIncrease}>Increase</button>
-      <button onClick={counterDecrease}>Decrease</button>
-      <button onClick={counterReset}>Reset</button>
+    <div className="exercise">
+      <input
+        type="text"
+        placeholder="Name"
+        name="name"
+        value={input}
+        onChange={changeHandler}
+      />
+      <p>{input}</p>
     </div>
   );
 }
 
-export default Counter;
+export default Input;

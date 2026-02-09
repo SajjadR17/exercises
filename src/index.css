@@ -1,3 +1,11 @@
-.blue{
-    color: blue;
+.blue {
+  color: blue;
+}
+
+.exercise {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
 }

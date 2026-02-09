@@ -1,4 +1,4 @@
-import Counter from "./Exercise";
+import Input from "./Exercise";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
         <h2>Sajjad Roohandeh</h2>
         <span>React Exercise</span>
       </div>
-      <Counter />
+      <Input />
     </>
   );
 }
