@@ -21,7 +21,7 @@ function Counter() {
   return (
     <div className="counter">
       <h1>Counter</h1>
-      <p>Num = {counter}</p>
+      <p className={counter % 2 === 0 && "blue"}>Num = {counter}</p>
       <button onClick={counterIncrease}>Increase</button>
       <button onClick={counterDecrease}>Decrease</button>
       <button onClick={counterReset}>Reset</button>
