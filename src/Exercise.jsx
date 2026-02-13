@@ -13,7 +13,7 @@ function Input() {
         type="text"
         placeholder="Name"
         name="name"
-        value={input}
+        value={input} 
         onChange={changeHandler}
       />
       <p>{input}</p>
